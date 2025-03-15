@@ -1,0 +1,63 @@
+databaseChangeLog:
+- changeSet:
+    id: 1734013244666-1
+    author: dell (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: stock_pkey
+            name: id
+            type: BIGINT
+        - column:
+            constraints:
+              nullable: false
+            name: stock_name
+            type: VARCHAR(255)
+        - column:
+            name: stock_price
+            type: FLOAT8
+        - column:
+            name: stock_desc
+            type: VARCHAR(255)
+        - column:
+            name: market_cap_in_cr
+            type: FLOAT8
+        - column:
+            name: pe_ratio
+            type: FLOAT8
+        - column:
+            name: face_value
+            type: FLOAT8
+        tableName: stock
+- changeSet:
+    id: 1734013244666-2
+    author: dell (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: tenant_pkey
+            name: id
+            type: BIGINT
+        - column:
+            name: create_date
+            type: TIMESTAMP WITHOUT TIME ZONE
+        - column:
+            name: tenant_id
+            type: VARCHAR(255)
+        - column:
+            name: tenant_name
+            type: VARCHAR(255)
+        - column:
+            name: schema_name
+            type: VARCHAR(255)
+        tableName: tenant
+
